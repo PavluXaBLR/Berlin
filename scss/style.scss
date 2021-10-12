@@ -91,6 +91,10 @@ $f-family: 'Inter', sans-serif;
     flex-direction: column;
     align-items: center;
   }
+  .content-top__title {
+    font: 46px/68px $f-family;
+    color: $color_white;
+  }
   .content-top__button {
     margin-bottom: 11px;
   }

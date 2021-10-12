@@ -161,6 +161,10 @@ h1, h2, h3, h4, h5, h6 {
       -ms-flex-align: center;
           align-items: center;
 }
+.content-top .content-top__title {
+  font: 46px/68px "Inter", sans-serif;
+  color: #FFFFFF;
+}
 .content-top .content-top__button {
   margin-bottom: 11px;
 }
