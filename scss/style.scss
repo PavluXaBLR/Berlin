@@ -3,6 +3,7 @@
 $color_white: #FFFFFF;
 $color_lite: #DBE4F1;
 $color_green: #0F3D33;
+$color_text: #323232;
 $color_button: rgba(80, 227, 194, 1);
 $color_button-lite: rgba(80, 227, 194, 0.14);
 
@@ -29,6 +30,18 @@ $f-family: 'Inter', sans-serif;
   align-items: center;
   background-color: rgba($r, $g, $b, $a);
 }
+@mixin style-title ($font-size, $line-height){
+  font-family: $f-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: bold;
+}
+@mixin style-text ($font-size, $line-height) {
+  font-family: $f-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color_text;
+}
 
 .wrapper {
   width: 100%;
@@ -49,7 +62,7 @@ $f-family: 'Inter', sans-serif;
   left: 0;
   top: 0;
   width: 100%;
-
+}
   .header__body {
     min-height: 145px;
     max-width: 1190px;
@@ -58,29 +71,28 @@ $f-family: 'Inter', sans-serif;
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-  }
+    .header__menu {
+      .menu__list {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
 
-  .header__menu {
-    .menu__list {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      flex-wrap: wrap;
+        .menu__item {
+          margin-left: 50px;
 
-      .menu__item {
-        margin-left: 50px;
-
-        a {
-          font: 16px/150% $f-family;
-          color: $color_lite;
+          a {
+            font: 16px/150% $f-family;
+            color: $color_lite;
+          }
         }
       }
     }
   }
-}
 
 .content-top {
   background: url("../img/top-content-bg.jpg") center center no-repeat;
+  margin-bottom: 136px;
 
   .content-top__container {
     max-width: 1190px;
@@ -90,10 +102,24 @@ $f-family: 'Inter', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
   }
   .content-top__title {
-    font: 46px/68px $f-family;
+    font: bold 46px/68px $f-family;
     color: $color_white;
+    margin-bottom: 5px;
+  }
+  .content-top__text {
+    font: 20px/34px $f-family;
+    color: $color_lite;
+    margin-bottom: 27px;
+    max-width: 560px;
+    text-align: center;
+  }
+  .content-top__not-cart {
+    font: 14px/28px $f-family;
+    color: $color_lite;
+
   }
   .content-top__button {
     margin-bottom: 11px;
@@ -102,21 +128,76 @@ $f-family: 'Inter', sans-serif;
 
 .feature {
   .feature__container {
-    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1103px;
     margin: 0 auto;
-    padding: 50px;
   }
+  .block-vert-line {
+    display: flex;
+    border: 1px solid #E8E8EA;
+    height: 115px;
+    margin-top: 115px;
+    padding: 0;
+  }
+
   .feature__item {
-    margin-right: 10px;
-    &:last-of-type {
-      margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 29%;
+    padding: 10px;
+    }
+  .feature__item__title {
+    @include style-title(22px, 154%);
+    margin-top: 33px;
+    margin-bottom: 24px;
+  }
+  .feature__item__text {
+    @include style-text(18px, 188%);
+    text-align: center;
+  }
+
+  .feature__button-red {
+    @include button-circle(50px, 50px, 252, 92, 101, 0.06);
+    
+    .feature__button-small {
+      @include button-circle(10px, 10px, 252, 92, 101, 1)
+    }
+  }
+  .feature__button-blue {
+    @include button-circle(50px, 50px, 80, 227, 194, 0.06);
+
+    .feature__button-small {
+      @include button-circle(10px, 10px, 80, 227, 194, 1)
     }
   }
   .feature__button-violet {
     @include button-circle(50px, 50px, 166, 101, 251, 0.06);
-    
+
     .feature__button-small {
       @include button-circle(10px, 10px, 166, 101, 251, 1)
     }
   }
 }
+
+.content__block1 {
+  .content__block1-container {
+    background: #F8FBFE;
+    min-height: 704px;
+    display: flex;
+    justify-content: space-between;
+
+    .analytics-img {
+      background: url("../img/Bitmap.jpg") center no-repeat;
+
+    }
+    .deposit-img {
+      background: url("../img/2.jpg") center no-repeat;
+    }
+  }
+}
+
+
+
