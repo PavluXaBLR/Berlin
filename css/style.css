@@ -641,7 +641,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 30px;
   line-height: 36px;
   font-weight: bold;
-    align-self: flex-start;
+      align-self: flex-start;
   position: relative;
   top: 8px;
 }
@@ -820,6 +820,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 60px 0 10px 10px;
   margin-right: 69px;
 }
+.footer .footer__container .footer__menu-block .footer__menu:last-child {
+  margin-right: 0;
+}
 .footer .footer__container .footer__menu-block .footer__menu .footer__menu-list {
   margin-bottom: 12px;
 }
@@ -827,20 +830,19 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   line-height: 212.5%;
-  color: #DBE4F1;
+  color: #F8FBFE;
 }
 .footer .footer__container .footer__menu-block .footer__menu .footer__menu-list:first-child {
+  margin-bottom: 23px;
+}
+.footer .footer__container .footer__menu-block .footer__menu .footer__menu-list:first-child a {
   font-family: "Inter", sans-serif;
   font-size: 14px;
   line-height: 228%;
   color: #DBE4F1;
-  margin-bottom: 23px;
 }
 .footer .footer__container .footer__menu-block .footer__menu .footer__menu-list:last-child {
   margin-bottom: 0;
-}
-.footer .footer__container .footer__menu-block .footer__menu .footer__menu-list:last-child {
-  margin-right: 0;
 }
 .footer .footer__container .footer__bottom {
   font-family: "Inter", sans-serif;
