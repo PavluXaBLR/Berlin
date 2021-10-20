@@ -867,6 +867,12 @@ h1, h2, h3, h4, h5, h6 {
 .footer .footer__container .footer__bottom .footer__bottom-items li {
   margin-right: 20px;
 }
+.footer .footer__container .footer__bottom .footer__bottom-items li a {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  line-height: 150%;
+  color: #DBE4F1;
+}
 .footer .footer__container .footer__bottom .social {
   display: -webkit-box;
   display: -ms-flexbox;
